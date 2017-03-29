@@ -5,3 +5,13 @@
     </li>
   <% }) %>
 </ul>
+<% if (page.total > 1){ %>
+  <section id="nav-wrapper">
+    <nav id="page-nav">
+      <%- paginator({
+        prev_text: "« prev",
+        next_text: "next »"
+      }) %>
+    </nav>
+  </section>
+<% } %>
