@@ -1,5 +1,5 @@
-[submodule "source/css/normalize"]
-	path = source/css/normalize
+[submodule "source/assets/normalize"]
+	path = source/assets/normalize
 	url = https://github.com/necolas/normalize.css.git
 [submodule "source/js/pager"]
 	path = source/js/pager
