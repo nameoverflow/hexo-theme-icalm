@@ -1,9 +1,9 @@
 # Header
 menu:
   Home: /
-  Archive: /archives
-  Tags: /tags
-  About: /about
+  Archive: /archives/
+  Tags: /tags/
+  About: /about/
 
 name: nameoverflow
 sign: What the f__k?
