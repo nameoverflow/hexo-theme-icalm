@@ -1,0 +1,6 @@
+[submodule "source/css/normalize"]
+	path = source/css/normalize
+	url = https://github.com/necolas/normalize.css.git
+[submodule "source/js/pager"]
+	path = source/js/pager
+	url = https://github.com/nameoverflow/SinglePager.git
