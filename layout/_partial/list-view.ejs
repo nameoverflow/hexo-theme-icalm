@@ -1,0 +1,26 @@
+<article class='ListView'>
+      <header class="title">
+        <% if (post.link){ %>
+          <h1>
+            <a href="<%= post.link %>"><%= post.title %></a>
+          </h1>
+        <% } else if (post.title){ %>
+          <h1>
+            <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+          </h1>
+        <% } %>
+        <%- partial('meta', { post: post }) %>
+      </header>
+    <div>
+      <% if (post.excerpt){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <div class="more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </div>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+</article>

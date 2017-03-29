@@ -1,0 +1,198 @@
+$link_color_d = rgb(104, 104, 104)
+$link_color_h = rgb(14, 14, 14)
+
+$text-color = rgb(74, 74, 74)
+
+fill-full(l, r)
+    position: absolute
+    left: l
+    right: r
+
+body
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif
+    // font-weight: 300
+    line-height: 1.7em
+    color: $text-color
+    overflow-x: hidden
+
+a
+    text-decoration: none
+    color: $link_color_d
+    border-bottom: 1px $link_color_d solid
+    &:hover
+        color: $link_color_h
+        border-bottom: 1px $link_color_h solid
+
+
+code
+    font-family: Monaco, Menlo, Consolas, 'Microsoft Yahei', monospace
+    font-size: 13px
+    margin: auto 5px
+    pre
+        width: 90%
+        margin: auto
+        overflow-x: auto
+        font-family: inherit
+        font-size: 13px
+        line-height: 1.6em
+
+img
+    max-width: 100%
+
+sup
+    a
+        border-bottom: none
+
+blockquote
+    margin: 1em 0
+    padding: 0 40px
+    box-sizing: border-box
+    border-left: 2px solid $text-color
+
+.container
+    box-sizing: border-box
+    fill-full(240px, 0)
+    margin: auto
+    max-width: 960px
+    width: 60%
+.container
+    > div
+        > footer
+            width: 100%
+            text-align: center
+            color: #ccc
+            font-size: 14px
+            line-height: 20px
+            padding: 5rem 0 2rem
+
+.Index, .TagArticle
+    padding: 7em 0 0 0
+    margin: 0
+    > li
+        list-style: none
+
+.Archives
+    $side_padding = 16px
+    $line_posi = -2px
+    $line_width = 2px
+    $cir_width_b = 10px
+    $cir_width_sm = $cir_width_b * 0.8
+    position: relative
+    padding: 7em $side_padding 0
+
+    &::before
+        position: absolute
+        top: 0
+        bottom: 0
+        left: $line_posi
+        height: auto
+        content: ''
+        background-color: #ddd
+        width: $line_width
+
+    h1, h2
+        font-weight: 400
+        &::before
+            position: absolute
+            left: ($line_posi - $cir_width_b / 2 + $line_width / 2)
+            content: ''
+            background-color: #ddd
+            width: $cir_width_b
+            height: $cir_width_b
+            border-radius: 50%
+            margin-top: $cir_width_b * 0.7
+        &:hover::before
+            background-color: #777
+            transition: background-color 500ms ease
+    h2
+        font-size: 1.3rem
+        margin-bottom: 0
+        &::before
+            left: ($line_posi - $cir_width_sm / 2 + $line_width / 2)
+            margin-top: $cir_width_sm
+            width: $cir_width_sm
+            height: $cir_width_sm
+
+.Tags
+    margin: 0
+    padding: 4em 0 0 0
+    text-align: center
+    > li
+        list-style: none
+    a
+        border-bottom: none
+
+@media screen and (max-width: 1024px)
+    .container
+        fill-full(0, 0)
+        padding-top: 20em
+        overflow-x: hidden
+        max-width: none
+        width: auto
+        &::before
+            content: ''
+            display: block
+            position: relative
+            height: 1px
+            width: 10%
+            background-color: #cdcdcd
+            top: 3.5em
+            margin: auto
+    .Archives
+        padding: 0 16px
+        margin-top: 7em
+    .container > *
+            margin-left: 4%
+            margin-right: 4%
+@media screen and (max-width: 450px)
+    html, body
+        font-size: 90%
+    blockquote
+        padding: 0 10px
+    code pre
+        font-size: 80%
+    .title h1,
+    .PageTitle h1
+        font-size: 1.3rem !important
+
+.route-trans-enter
+    fill-full(0, 0)
+    transform: translateX(-100px)
+    opacity: 0
+
+.route-trans-enter.route-trans-enter-active
+    animation: route-trans-e 0.8s
+    animation-fill-mode: forwards
+
+
+.route-trans-leave
+    fill-full(0, 0)
+    transform: translateX(0)
+    opacity: 1
+
+.route-trans-leave.route-trans-leave-active
+    animation: route-trans-o 0.8s
+    animation-fill-mode: forwards
+
+@keyframes route-trans-e
+    0%
+        transform: translate3d(-100px, 0, 0)
+        opacity: 0
+    50%
+        transform: translate3d(-100px, 0, 0)
+        opacity: 0
+    100%
+        transform: translate3d(0, 0, 0)
+        opacity: 1
+
+@keyframes route-trans-o
+    0%
+        transform: translate3d(0, 0, 0)
+        opacity: 1
+    50%
+        transform: translate3d(100px, 0, 0)
+        opacity: 0
+    100%
+        transform: translate3d(100px, 0, 0)
+        opacity: 0
+

@@ -1,0 +1,22 @@
+# Header
+menu:
+  Home: /
+  Archive: /archives
+  Tags: /tags
+  About: /about
+
+name: nameoverflow
+sign: What the f__k?
+rss: /atom.xml
+
+# Content
+excerpt_link: Read On »
+# fancybox: true
+
+media:
+  github: https://github.com/nameoverflow
+  facebook: https://www.facebook.com/profile.php?id=100004252391322
+
+
+# Miscellaneous
+favicon: /favicon.png

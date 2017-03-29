@@ -1,0 +1,7 @@
+<ul class="Index">
+  <% page.posts.each(function (post) { %>
+    <li>
+      <%- partial('_partial/list-view', { post: post }) %>
+    </li>
+  <% }) %>
+</ul>

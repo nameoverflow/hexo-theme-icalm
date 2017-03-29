@@ -1,0 +1,31 @@
+<article class='ContentView'>
+    <header class='PageTitle'>
+        <h1><%= post.title %></h1>
+    </header>
+
+    <section>
+      <%- post.content %>
+
+      <% if (post.type === 'tags') { %>
+        <ul class="Tags">
+          <%- partial('_partial/tag-list', { className: 'tag-list', tags: site.tags }) %>
+        </ul>
+      <% } %>
+
+    </section>
+    <% if (!isPage) { %>
+      <section class='ArticleMeta'>
+          <div>
+            发布于&nbsp;
+            <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+              <%= date(post.date, config.date_format) %>
+            </time>
+          </div>
+          <% if (post.tags && post.tags.length){ %>
+            <div>
+              tags: <%- partial('tag-list', { className: 'meta-text', tags: post.tags }) %>
+            </div>
+          <% } %>
+      </section>
+    <% } %>
+</article>

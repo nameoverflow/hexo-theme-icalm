@@ -1,0 +1,13 @@
+<div class="Archives">
+  <% let years = {}; %>
+  <%
+      page.posts.each(post => {
+        const y = post.date.year();
+        if (!years[y]) years[y] = [];
+        years[y].push(post);
+      })
+  %>
+  <% for (const y in years) { %>
+    <%- partial('_partial/time-sec', { year: y, posts: years[y] }) %>
+  <% } %>
+</div>

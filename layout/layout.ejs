@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ch-Hans">
+<%- partial('_partial/head') %>
+<body>
+<div class="Shell">
+    <%- partial('_partial/sidebar') %>
+    <div class="container">
+        <div data-pager-shell>
+            <%- body %>
+            <%- partial('_partial/footer') %>
+        </div>
+    </div>
+</div>
+<%- js('js/pager/dist/singlepager.js') %>
+<script>
+var sp = new Pager('data-pager-shell')
+
+</script>
+</body>
+</html>

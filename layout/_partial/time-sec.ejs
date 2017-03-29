@@ -1,0 +1,15 @@
+<section class="TimeSection">
+    <h1 class="time-section-year">
+        <%= year %>
+    </h1>
+    <ul class="time-section-list">
+      <% posts.forEach(post => { %>
+        <li>
+            <a href="<%= url_for(post.path) %>">
+                <h2><%= post.title %></h2>
+            </a>
+            <%- partial('meta', { post: post }) %>
+        </li>
+      <% }) %>
+    </ul>
+</section>

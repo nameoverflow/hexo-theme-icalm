@@ -1,0 +1,107 @@
+$header_width = 240px
+$header_height = 180px
+$av_size = 130px
+
+.SideBar
+    position: fixed
+    width: $header_width
+    overflow: hidden
+    top: 0
+    left: 0
+    bottom: 0
+    height: 100%
+    position: fixed
+    background-color: #FFFFFF
+    z-index: 10000
+    > section
+        width 100%
+.media
+    position: absolute
+    width: 100%
+    bottom: 0.5rem
+    text-align: right
+    > a
+        margin-left: 1em
+        border: none
+    img
+        width: 1.5em
+        height: auto
+        opacity: 0.6
+        &:hover
+            opacity: 1
+.menu
+    box-sizing: border-box
+    position: absolute
+    top: $header_height + 60px
+    width: $header_width
+    margin: 0
+    text-align: right
+    line-height: 1.7em
+    > ul
+        padding-top: 2em
+a.Btn
+    border-bottom: none
+    > li
+        border-right: 3px #aaa solid
+        padding-right: 1em
+        list-style: none
+        line-height: 1em
+        margin: 2rem 0
+        &:hover
+            border-right-color: #333
+    &.active > li
+        border-right-color: #333
+
+.avatar
+    height: $header_height
+    background-color: #333
+    background-image: url(../../assets/header.png)
+    position: absolute
+    width: 100%
+    top: 0
+.av-pic
+    display: block
+    width: $av_size
+    height: $av_size
+    margin-top: $header_height - ($av_size / 2)
+    margin-left: auto
+    margin-right: auto
+    border-radius: 50%
+    background-color: #FFFFFF
+    background-image: url(../../assets/tree_small.png)
+    background-size: 100%
+
+@media screen and (max-width: 1024px)
+    .SideBar
+        position: absolute
+        left: 0
+        right: 0
+        height: 10em
+        width: auto
+        overflow: visible
+    .menu
+        position: relative
+        top: $header_height / 1.5 + ($av_size / 2)
+        text-align: center
+        width: 100%
+        > ul
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 50%
+            min-width: 280px
+            margin: 0 auto
+            padding: 0
+    .Btn > li
+        margin: 1em 0
+        padding: 0
+        flex: 1
+        border-right: none
+        min-width: 70px
+    .media
+        bottom: -2.5em
+        right: 1.5em
+    .avatar
+        height: $header_height / 1.5
+        > .av-pic
+            margin-top: $header_height / 1.5 - ($av_size / 2)

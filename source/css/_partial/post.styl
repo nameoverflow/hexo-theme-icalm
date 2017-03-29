@@ -1,0 +1,81 @@
+.ListView
+    margin-bottom: 7em
+    .title
+        text-align: center
+        h1
+            font-size: 1.8rem
+            font-weight: 400
+            margin-bottom: 0.3em
+            line-height: 125%
+        a
+            border-bottom: none
+            color: #111
+            &:hover
+                color: #0e0e0e
+                border-bottom: 1px #0e0e0e solid
+.ListMeta
+    font-size: 0.8em
+    color: #bbb
+    margin-bottom: 2.5em
+    &:hover
+        color: #333
+    ul
+        display: inline
+        padding: 0
+li.meta-text
+    display: inline-block
+.more-link
+    a
+        border-bottom-width: 2px
+
+.PageTitle
+    text-align: left
+    margin-bottom: 4em
+    h1
+        font-size: 2rem
+        font-weight: 400
+        margin-bottom: 0.3em
+        margin-left: -10%
+        @media screen and (max-width: 1024px)
+            font-size: 2rem
+            margin-left: auto
+            padding-top: 3rem
+    a
+        border: none
+        color: #111
+time
+    font-family: inherit
+
+.ContentView
+    padding-top: 4em
+    .ArticleMeta
+        font-size: 0.8em
+        color: #bbb
+        margin: 2.5em auto
+        a
+            border-bottom: 1px #bbb solid
+        &:hover
+            color: #333
+            a
+                border-bottom: 1px #333 solid
+
+        > div:nth-child(1)
+            position: relative
+            width: 49%
+            text-align: right
+            &::after
+                content: '/'
+                font-size: 300%
+                font-weight: 100
+                position: absolute
+                top: 15px
+                right: -18px
+        > div:nth-child(2)
+            width: 49%
+            margin-left: auto
+            margin-right: 0
+        > div:only-child
+            width: 100%
+            text-align: center
+            &::after
+                display: none
