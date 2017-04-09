@@ -8,4 +8,10 @@
     <%- partial('tag-list', { className: 'meta-text', tags: post.tags }) %>
   </ul>
   <% } %>
+  <% if (post.categories && post.categories.length){ %>
+  / 
+  <ul>
+    <%- partial('tag-list', { className: 'meta-text', tags: post.categories }) %>
+  </ul>
+  <% } %>
 </div>

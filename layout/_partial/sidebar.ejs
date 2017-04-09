@@ -1,10 +1,13 @@
 <aside class='SideBar'>
-    <section class='avatar'>
-        <div class='av-pic'/>
+    <section class='avatar' style="background-image: url(<%= theme.sidebar_background %>)">
+        <div class='av-pic' style="background-image: url(<%= theme.avatar %>)">
+        </div>
     </section>
     <section class='menu'>
         <div><%= config.title %></div>
-        <div><%= config.subtitle %></div>
+        <% if (config.subtitle) { %>
+            <div><%= config.subtitle %></div>
+        <% } %>
         <ul>
           <% for (const m in theme.menu) { %>
             <a href="<%= theme.menu[m] %>" class="Btn">

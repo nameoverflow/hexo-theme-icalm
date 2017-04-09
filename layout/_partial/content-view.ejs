@@ -10,6 +10,10 @@
         <ul class="Tags">
           <%- partial('_partial/tag-list', { className: 'tag-list', tags: site.tags }) %>
         </ul>
+      <% } else if (post.type === 'categories') { %>
+        <ul class="Tags">
+          <%- partial('_partial/tag-list', { className: 'tag-list', tags: site.categories }) %>
+        </ul>
       <% } %>
 
     </section>

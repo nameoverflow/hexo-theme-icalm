@@ -1,24 +1,30 @@
-# Header
+# Links on sidebar
 menu:
   Home: /
   Archive: /archives/
-  Tags: /tags/
-  About: /about/
+  # Tags: /tags/
+  # Categories: /categories/
+  # About: /about/
 
-name: nameoverflow
-sign: What the f__k?
+# Pictures shown on the sidebar
+# Use the absolute URL after generating
+# avatar: /assets/tree_small.png
+# sidebar_background: /assets/header.png
+
 rss: /atom.xml
 
 # Content
 excerpt_link: Read On »
-# fancybox: true
 
+# Will be shown on the bottom.
+## To add new icon, just copy .svg to source/assets/ and add entries below.
 media:
-  github: https://github.com/nameoverflow
-  facebook: https://www.facebook.com/profile.php?id=100004252391322
+  # github: https://github.com/nameoverflow
+  # facebook: https://www.facebook.com/profile.php?id=100004252391322
 
 source_han_font: true
 
+# When to show disqus
 # 'disabled' | 'all' | 'post'
 disqus: post
 
