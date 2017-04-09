@@ -17,6 +17,7 @@ media:
   github: https://github.com/nameoverflow
   facebook: https://www.facebook.com/profile.php?id=100004252391322
 
+source_han_font: true
 
 # Miscellaneous
 favicon: /favicon.png

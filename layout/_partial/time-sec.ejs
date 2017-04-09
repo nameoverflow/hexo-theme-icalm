@@ -3,6 +3,7 @@
         <%= year %>
     </h1>
     <ul class="time-section-list">
+      <% posts.sort((l, r) => r.date - l.date) %>
       <% posts.forEach(post => { %>
         <li>
             <a href="<%= url_for(post.path) %>">

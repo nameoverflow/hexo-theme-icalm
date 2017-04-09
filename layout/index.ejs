@@ -1,4 +1,9 @@
 <ul class="Index">
+  <% if (page.tag || page.category) { %>
+    <header class='PageTitle'>
+        <h1>{ <%= page.tag || page.category %> }</h1>
+    </header>
+  <% } %>
   <% page.posts.each(function (post) { %>
     <li>
       <%- partial('_partial/list-view', { post: post }) %>
