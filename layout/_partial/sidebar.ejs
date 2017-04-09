@@ -3,8 +3,8 @@
         <div class='av-pic'/>
     </section>
     <section class='menu'>
-        <div><%= theme.name %></div>
-        <div><%= theme.sign %></div>
+        <div><%= config.title %></div>
+        <div><%= config.subtitle %></div>
         <ul>
           <% for (const m in theme.menu) { %>
             <a href="<%= theme.menu[m] %>" class="Btn">

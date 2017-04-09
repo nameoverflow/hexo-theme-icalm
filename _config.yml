@@ -19,5 +19,8 @@ media:
 
 source_han_font: true
 
+# 'disabled' | 'all' | 'post'
+disqus: post
+
 # Miscellaneous
 favicon: /favicon.png
