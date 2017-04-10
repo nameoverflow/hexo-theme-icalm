@@ -32,7 +32,7 @@
           <% } %>
       </section>
     <% } %>
-    <% if (theme.disqus === 'all' || (theme.disqus === 'post' && !isPage)) { %>
+    <% if (theme.disqus.enable === 'all' || (theme.disqus.enable === 'post' && !isPage)) { %>
       <section>
         <div id="disqus_thread"></div>
         <script>
@@ -43,7 +43,7 @@
           if (typeof DISQUS === 'undefined') {
             (function() { // DON'T EDIT BELOW THIS LINE
               var d = document, s = d.createElement('script');
-              s.src = 'https://hcyue.disqus.com/embed.js';
+              s.src = 'https://<%= theme.disqus.shortname %>.disqus.com/embed.js';
               s.setAttribute('data-timestamp', +new Date());
               (d.head || d.body).appendChild(s);
             })();

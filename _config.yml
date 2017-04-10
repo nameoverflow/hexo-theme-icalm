@@ -24,9 +24,13 @@ media:
 
 source_han_font: true
 
-# When to show disqus
-# 'disabled' | 'all' | 'post'
-disqus: post
+# Disqus settings
+disqus:
+  # 'disabled' | 'all' | 'post'
+  enable: disabled
+  # Shortname of your disqus website.
+  # See disqus admin
+  shortname:
 
 # Miscellaneous
 favicon: /favicon.png
