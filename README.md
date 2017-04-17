@@ -6,9 +6,16 @@ Using the [SinglePager](https://github.com/nameoverflow/SinglePager) to provide 
 
 [Live example](https://nameoverflow.github.io/)
 
+## Installation
+```
+git clone https://github.com/nameoverflow/hexo-theme-icalm.git themes/hexo-theme-icalm
+cd themes/hexo-theme-icalm/
+git submodule update --init --recursive
+```
+
 ## Customize
 
-Clone and edit `_config.yml`.
+Edit `_config.yml`.
 
 ## Tags or Categories Page
 
