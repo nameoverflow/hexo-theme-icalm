@@ -2,7 +2,14 @@
 
 [Live example](https://nameoverflow.github.io/)
 
+## Browser Support
+
+Latest versions of modern browsers for ES2015+ support.
+
+Basic style support for outdated browsers.
+
 ## Installation
+
 ```
 git clone https://github.com/nameoverflow/hexo-theme-icalm.git themes/hexo-theme-icalm
 cd themes/hexo-theme-icalm/
