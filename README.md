@@ -20,6 +20,12 @@ cd themes/hexo-theme-icalm/
 git submodule update --init --recursive
 ```
 
+update
+
+```
+git pull && git submodule update --remote
+```
+
 ## Customize
 
 Edit `_config.yml`.
