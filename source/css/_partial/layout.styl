@@ -2,6 +2,7 @@ $link_color_d = rgb(104, 104, 104)
 $link_color_h = rgb(14, 14, 14)
 
 $text-color = rgb(74, 74, 74)
+$text-muted-color = rgb(204, 204, 204)
 
 fill-full(l, r)
     position: absolute
@@ -68,10 +69,16 @@ blockquote
         > footer
             width: 100%
             text-align: center
-            color: #ccc
+            color: $text-muted-color
             font-size: 14px
             line-height: 20px
             padding: 5rem 0 2rem
+            a
+                color: $text-muted-color
+                border-color: $text-muted-color
+                &:hover
+                    color: darken($text-muted-color, 50%)
+                    border-color: darken($text-muted-color, 50%)
 
 .Index, .TagArticle
     padding: 7em 0 0 0
@@ -203,4 +210,3 @@ blockquote
     100%
         transform: translate3d(100px, 0, 0)
         opacity: 0
-

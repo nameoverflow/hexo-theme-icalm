@@ -1,6 +1,12 @@
 <footer>
-    <div>© 2016 - <%= config.author %> <% if (config.license) { %> , <%= config.license %> <% } %></div>
+    <div>© <%= new Date().getFullYear() %> - <%= config.author %> <% if (config.license) { %> , <%= config.license %> <% } %></div>
     <div>
-    Powered by Hexo
+        <span>
+            Powered by <a href="https://hexo.io">Hexo</a>
+        </span>
+        ,
+        <span>
+            Theme - <a href="https://github.com/nameoverflow/hexo-theme-icalm">Icalm</a>
+        </span>
     </div>
 </footer>
