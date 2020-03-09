@@ -1,6 +1,6 @@
 <aside class='SideBar'>
-    <section class='avatar' style="background-image: url(<%= theme.sidebar_background %>)">
-        <div class='av-pic' style="background-image: url(<%= theme.avatar %>)">
+    <section class='avatar' style="background-image: url(<%= url_for(theme.sidebar_background) %>)">
+        <div class='av-pic' style="background-image: url(<%= url_for(theme.avatar) %>)">
         </div>
     </section>
     <section class='menu'>
@@ -20,7 +20,7 @@
         <% for (const m in theme.media) { %>
             <% if (theme.media[m]) { %>
                 <a href="<%- url_for(theme.media[m]) %>">
-                    <img src="/assets/<%= m %>.svg" />
+                    <img src="<%= `${url_for(/assets/)}${m}.svg` %>" />
                 </a>
             <% } %>
         <% } %>

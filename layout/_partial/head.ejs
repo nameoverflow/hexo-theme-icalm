@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><% if (page.title){ %><%= page.title %> | <% } %><%= config.title %></title>
   <% if (theme.favicon) { %>
-    <link rel="icon" href="<%- theme.favicon %>">
+    <link rel="icon" href="<%- url_for(theme.favicon) %>">
   <% } %>
   <% if (theme.source_han_font) { %>
   <% } %>
